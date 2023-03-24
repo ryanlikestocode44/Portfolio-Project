@@ -5,7 +5,63 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    place-items: center;
+    font-family: 'Jaldi', sans-serif;
+}
+
+.calc-body {
+    position: relative;
+    background-color: #579BB1;
+    border-radius: 20px;
+}
+
+.mode-toggle {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: black;
+    background-color: #16262E;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .5);
+}
+.mode-toggle.active {
+    background-color: #579BB1;
+}
+
+.title {
+    padding: 9px;
+    height: 60px;
+    text-transform: uppercase;
+    color: #FCF7F8;
+}
+.display {
+    width: 400px;
+    height: 250px;
+}
+
+table{
+    width: 100%;
+}
+
+td {
+    width: 85px;
+    height: 60px;
+    background-color: #E1D7C6;
+    color: #5B616A;
+    text-align: center;
+    font-size: 3.6rem;
+}
+
+.bottom td:first-child{
+    border-radius: 0 0 0 18px;
+}
+
+.bottom td:last-child{
+    border-radius: 0 0 18px 0;
 }
