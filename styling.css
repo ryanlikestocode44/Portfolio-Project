@@ -19,7 +19,7 @@ body {
     overflow: hidden;
 }
 
-.mode-toggle {
+.toggle-mode {
     position: absolute;
     height: 40px;
     width: 40px;
@@ -27,21 +27,25 @@ body {
     top: 10px;
     right: 10px;
     cursor: pointer;
+    z-index: 3;
     color: black;
     background-color: #16262E;
     box-shadow: 0 4px 4px rgba(0, 0, 0, .5);
 }
 
-.mode-toggle.active {
+.toggle-mode.active {
     background-color: #579BB1;
 }
 
 .title {
-    padding: 9px;
+    position: relative;
+    padding: 8px 0 6px 15px;
+    width: 150px;
     height: 60px;
+    font-size: 17px;
     text-transform: uppercase;
     color: #FCF7F8;
-    z-index: 10;
+    z-index: 3;
 }
 
 .circle {
@@ -52,11 +56,15 @@ body {
     height: 360px;
     border-radius: 50%;
     background-color: #2E809A;
+    filter: blur(30px);
 }
 
 .display {
+    position: relative;
+    color: #FCF7F8;
     width: 400px;
     height: 250px;
+    z-index: 3;
 }
 
 table{
@@ -81,6 +89,9 @@ td {
     border-radius: 0 0 18px 0;
 }
 
+.operator, .number:hover{
+    background-color: #c3bbae;;
+}
 .main,
 .equal {
     background-color: #ABA9C3;
