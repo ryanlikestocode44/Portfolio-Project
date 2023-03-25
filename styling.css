@@ -16,6 +16,7 @@ body {
     position: relative;
     background-color: #579BB1;
     border-radius: 20px;
+    overflow: hidden;
 }
 
 .mode-toggle {
@@ -30,6 +31,7 @@ body {
     background-color: #16262E;
     box-shadow: 0 4px 4px rgba(0, 0, 0, .5);
 }
+
 .mode-toggle.active {
     background-color: #579BB1;
 }
@@ -39,7 +41,19 @@ body {
     height: 60px;
     text-transform: uppercase;
     color: #FCF7F8;
+    z-index: 10;
 }
+
+.circle {
+    position: absolute;
+    top: -65px;
+    right: -45px;
+    width: 490px;
+    height: 360px;
+    border-radius: 50%;
+    background-color: #2E809A;
+}
+
 .display {
     width: 400px;
     height: 250px;
@@ -56,12 +70,19 @@ td {
     color: #5B616A;
     text-align: center;
     font-size: 3.6rem;
+    cursor: pointer;
 }
 
 .bottom td:first-child{
     border-radius: 0 0 0 18px;
 }
 
-.bottom td:last-child{
+.equal {
     border-radius: 0 0 18px 0;
+}
+
+.main,
+.equal {
+    background-color: #ABA9C3;
+    color: #FCF7F8;
 }
