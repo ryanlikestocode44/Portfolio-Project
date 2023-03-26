@@ -53,7 +53,7 @@ body {
     top: -65px;
     right: -45px;
     width: 490px;
-    height: 360px;
+    height: 330px;
     border-radius: 50%;
     background-color: #2E809A;
     filter: blur(30px);
@@ -61,7 +61,6 @@ body {
 
 
 .display {
-    background-color: #ABA9C3;
     position: relative;
     width: 400px;
     height: 230px;
@@ -90,12 +89,16 @@ td {
     border-radius: 0 0 0 18px;
 }
 
-.equal {
+#equal {
     border-radius: 0 0 18px 0;
 }
 
-.operator, .number:hover{
+.btn:not(.main, #equal):hover {
     background-color: #c3bbae;;
+}
+
+.main:hover #equal {
+    background-color: #7a798c;
 }
 .main,
 .equal {
