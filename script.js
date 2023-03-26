@@ -4,20 +4,21 @@ let buttons = Array.from(document.querySelectorAll('.btn'));
 console.log('test')
 buttons.map(button => {
     button.addEventListener('click', (e) => {
-        console.log(e);
-        console.log(e.target.innerText);
-        switch(e.target.innerText){
-            case 'AC':
+        switch(e.target.id){
+            case 'clear':
                 display.innerText = '';
                 break;
-            case '=':
+            case 'equal':
+                function calculate(input) {
+                    return eval(`(${input})`);
+                }
                 try {
-                    display.innerText = eval(display.innerText);
+                    display.innerText = calculate(display.innerText);
                 } catch {
-                    display.innerText = 'Input Error'
+                    display.innerText = 'Input Error';
                 }
                 break;
-            case '&larr;':
+            case 'backspace':
                 if (display.innerText){
                     display.innerText = display.innerText.slice(0, -1);
                 }
